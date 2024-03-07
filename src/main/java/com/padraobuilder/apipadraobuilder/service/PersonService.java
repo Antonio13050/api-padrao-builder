@@ -26,8 +26,8 @@ public class PersonService {
         String passwordEncoded = this.passwordEncoder.encode(form.password());
         Person person = PersonBuilder.builder()
                 .withName(form.name())
-                .withPhone(form.phone())
                 .withEmail(form.email())
+                .withPhone(form.phone())
                 .withPassword(passwordEncoded)
                 .build();
         this.personRepository.save(person);

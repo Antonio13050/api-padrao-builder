@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: api-padrao-builder-postgres
+    environment:
+      POSTGRES_DB: springdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    networks:
+      - spring-network
+
+  app:
+    build: .
+    container_name: api-padrao-builder-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - spring-network
+
+networks:
+  spring-network:
+    driver: bridge

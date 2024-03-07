@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/apicombuilder
-    username: postgres
-    password: de13050*
-  jpa:
-    hibernate:
-      ddl-auto: create-drop

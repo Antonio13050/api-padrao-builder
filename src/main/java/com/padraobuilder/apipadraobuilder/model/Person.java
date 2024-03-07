@@ -32,7 +32,7 @@ public class Person {
     public Person (){
     }
 
-    public Person(String name, String phone, String email, String password) {
+    public Person(String name, String email, String phone, String password) {
         this.guid = UUID.randomUUID().toString();
         this.name = name;
         this.email = email;
