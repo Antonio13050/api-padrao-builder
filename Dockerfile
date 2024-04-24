@@ -9,4 +9,4 @@ FROM openjdk:17-jdk-slim
 
 COPY --from=build /usr/src/app/target/*.jar /usr/app/app.jar
 
-CMD ["java", "-jar", "/usr/app/app.jar"]z
+CMD ["java", "-jar", "/usr/app/app.jar"]
